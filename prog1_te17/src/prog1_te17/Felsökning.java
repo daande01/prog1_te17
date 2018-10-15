@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Felsökning {
 public static void main(String[] args) {
 	
-	Scanner input =new Scanner(System.in) ;
+	Scanner input =new Scanner(System.in) ;//scanner
 			
 	System.out.print("tal A:");
 	int talA= input.nextInt();
