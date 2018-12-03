@@ -22,6 +22,14 @@ public class Metoder1 {
 
 	}
 
+
+
+
+
+
+
+
+
 	// One rule-of-thumb: ask yourself "does it make sense to call this method, even
 	// if no Obj has been constructed yet?" If so, it should definitely be static.
 

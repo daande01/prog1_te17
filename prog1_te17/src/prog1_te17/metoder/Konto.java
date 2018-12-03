@@ -3,10 +3,8 @@ package prog1_te17.metoder;
 public class Konto {
 
 	static int ränta = 10;
-
-	public int saldo = 0;
-
-	public int personnummer;
+	private double saldo = 0;
+	private int personnummer;
 
 	public Konto(int p, int s) {
 
@@ -14,12 +12,10 @@ public class Konto {
 
 			saldo = s;
 		}
-
 		personnummer = p;
-
 	}
 
-	public int getSaldo() {
+	public double getSaldo() {
 
 		return saldo;
 
@@ -27,17 +23,17 @@ public class Konto {
 
 	public void calcInt() {
 
-		saldo = saldo * (1 + (ränta / 100));
+		saldo = saldo * (1 + (ränta / 100.0));
+
 
 	}
 
 	public static void main(String[] args) {
 
-		Konto k1 = new Konto(828205, 40);
 
-		k1.calcInt();
-
-		System.out.print(k1.getSaldo());
+		Konto daniel = new Konto(828205, 40);
+		daniel.calcInt();
+		System.out.print(daniel.getSaldo());
 
 	}
 
