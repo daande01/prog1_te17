@@ -8,9 +8,8 @@ public class Metoder2 {
 
 		System.out.println(subresultat);
 
-		 Metoder1.summa(12,12);
+		Metoder1.summa(12, 12);
 
 	}
-
 
 }
