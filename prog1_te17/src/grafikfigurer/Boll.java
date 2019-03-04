@@ -12,8 +12,8 @@ public class Boll extends JComponent {
 	int y = 100;
 	int width;
 	int height;
-	int vx=1;
-	int vy=1;
+	int vx = 1;
+	int vy = 1;
 
 	public Boll() {
 
@@ -21,32 +21,26 @@ public class Boll extends JComponent {
 
 			repaint();
 
-			height=this.getHeight();
-			width=this.getWidth();
+			height = this.getHeight();
+			width = this.getWidth();
 
-
-			updatera(width,height);
+			updatera(width, height);
 		});
 		t1.start();
 
-
-
 	}
 
-	private void updatera(int w,int h) {
-		vy =vy+1;
-		x+=vx;
-		y+=vy;
-			System.out.println(x+"  "+h);
-		if (h<y+20) {
+	private void updatera(int w, int h) {
+		vy = vy + 1;
+		x += vx;
+		y += vy;
+		System.out.println(x + "  " + h);
+		if (h < y + 20) {
 
-				System.out.println("sant");
-			vy=-vy;
-
-
+			System.out.println("sant");
+			vy = -vy;
 
 		}
-
 
 	}
 
@@ -64,7 +58,7 @@ public class Boll extends JComponent {
 		JFrame f = new JFrame();
 		f.setContentPane(new Boll());
 		f.setVisible(true);
-		f.setSize(400,400);
+		f.setSize(400, 400);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

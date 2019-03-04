@@ -22,15 +22,16 @@ public class Grafikjtextfield extends JFrame {
 		t1.setPreferredSize(new Dimension(100, 20));
 		setPreferredSize(new Dimension(400, 400));
 
-		b1.addActionListener(e->{
+		b1.addActionListener(e -> {
 
-			String ord=t1.getText();
+			String ord = t1.getText();
 			l1.setText(ord);
 		});
 
 		pack();
 		setVisible(true);
 	}
+
 	public static void main(String[] args) {
 
 		new Grafikjtextfield();

@@ -1,4 +1,4 @@
-package grafikfigurer;
+package grafikflerabollar;
 
 import java.awt.Graphics;
 
@@ -6,22 +6,24 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-public class Boll2 extends JComponent {
+public class Bollgame extends JComponent {
 
-	private int x = 0;
-	private int y = 0;
+	private Boll boll;
+	private Boll boll2;
 
-	private int xv = 1;
-	private int yv = 1;
+	public Bollgame() {
 
-	public Boll2() {
+		boll = new Boll((Math.random() * 200), (Math.random() * 300), 0, 3);
+		boll2 = new Boll((Math.random() * 200), (Math.random() * 300), 0, 3);
 
-		Timer t = new Timer(100, e -> {
+		Timer t = new Timer(40, e -> {
 
 			int height = this.getHeight();
 			int width = this.getWidth();
-
-			update(height, width);
+			// System.out.println("boll "+boll.yv);
+			// System.out.println("boll2 "+boll2.yv);
+			boll.updatera(height, width);
+			boll2.updatera(height, width);
 
 			repaint();
 
@@ -30,35 +32,20 @@ public class Boll2 extends JComponent {
 
 	}
 
-	public void update(int h, int w) {
-
-		yv = yv + 1;
-		x += 1;
-		y += yv;
-
-		System.out.println(yv);
-
-		if (y > h - 50) {
-
-			yv = -yv;
-
-		}
-
-	}
-
 	@Override
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
 
-		g.fillOval(x, y, 50, 50);
+		boll.rita(g);
+		boll2.rita(g);
 	}
 
 	public static void main(String[] args) {
 
 		JFrame f = new JFrame();
 
-		f.setContentPane(new Boll2());
+		f.setContentPane(new Bollgame());
 		f.setSize(500, 500);
 		f.setVisible(true);
 		f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
