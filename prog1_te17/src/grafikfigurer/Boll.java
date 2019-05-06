@@ -47,10 +47,11 @@ public class Boll extends JComponent {
 	@Override
 	protected void paintComponent(Graphics g) {
 
-		super.paintComponent(g);
+		//super.paintComponent(g);
 
 		g.fillOval(x, y, 20, 20);
-
+		g.fillRect(20, 20, 1, 200);
+		g.fillRect(20, 220, 200, 1);
 	}
 
 	public static void main(String[] args) {

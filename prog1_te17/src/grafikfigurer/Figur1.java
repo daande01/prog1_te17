@@ -1,30 +1,22 @@
 package grafikfigurer;
 
-
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 public class Figur1 extends JComponent {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("My Drawing");
-        frame.setSize(500, 500);
-        frame.setContentPane(new Figur1());
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("My Drawing");
+		frame.setSize(500, 500);
+		frame.setContentPane(new Figur1());
 
+		frame.setVisible(true);
+	}
 
-
-        frame.setVisible(true);
-    }
-
-    @Override
+	@Override
 	public void paint(Graphics g) {
-        g.fillOval(100, 100, 200, 200);
-    }
-
-
-
-
-
+		g.fillOval(100, 100, 200, 200);
+	}
 
 }

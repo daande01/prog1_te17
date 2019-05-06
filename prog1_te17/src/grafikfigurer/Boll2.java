@@ -16,7 +16,7 @@ public class Boll2 extends JComponent {
 
 	public Boll2() {
 
-		Timer t = new Timer(100, e -> {
+		Timer t = new Timer(40, e -> {
 
 			int height = this.getHeight();
 			int width = this.getWidth();
